@@ -5,7 +5,7 @@ import org.raml.parser.visitor.RamlDocumentBuilder;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import pl.nort.rat.parse.RamlProcessor;
+import pl.nort.rat.process.RamlProcessor;
 
 import javax.inject.Inject;
 

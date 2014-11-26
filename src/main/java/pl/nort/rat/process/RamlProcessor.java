@@ -1,4 +1,4 @@
-package pl.nort.rat.parse;
+package pl.nort.rat.process;
 
 import org.raml.model.Raml;
 

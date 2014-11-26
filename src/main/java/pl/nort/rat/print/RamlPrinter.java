@@ -3,7 +3,7 @@ package pl.nort.rat.print;
 import org.raml.model.*;
 import org.raml.model.parameter.QueryParameter;
 import org.springframework.stereotype.Component;
-import pl.nort.rat.parse.RamlProcessor;
+import pl.nort.rat.process.RamlProcessor;
 
 import java.util.Map;
 

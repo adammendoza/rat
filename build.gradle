@@ -52,3 +52,7 @@ jar {
     baseName = 'rat'
     version = '0.1'
 }
+
+run {
+    systemProperties System.getProperties()
+}

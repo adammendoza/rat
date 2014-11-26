@@ -15,13 +15,11 @@ import static com.google.common.base.Preconditions.checkNotNull;
 public class RatRunner implements CommandLineRunner {
 
     private final RamlProcessor ramlProcessor;
-    private final String endpoint;
     private final String testPath;
 
     @Inject
-    public RatRunner(RamlProcessor ramlProcessor, @Value("${endpoint}") String endpoint, @Value("${testPath}") String testPath) {
+    public RatRunner(RamlProcessor ramlProcessor, @Value("${testPath}") String testPath) {
         this.ramlProcessor = checkNotNull(ramlProcessor);
-        this.endpoint = checkNotNull(endpoint);
         this.testPath = checkNotNull(testPath);
     }
 
@@ -30,7 +28,5 @@ public class RatRunner implements CommandLineRunner {
         Raml raml = new RamlDocumentBuilder().build(testPath);
 
         ramlProcessor.process(raml);
-
-        System.out.println("running test: " + testPath + " against: " + endpoint);
     }
 }

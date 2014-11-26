@@ -28,8 +28,9 @@ public class RamlPrinter implements RamlProcessor {
 
                 for (Map.Entry<String, QueryParameter> queryParameterEntry : queryParameters.entrySet()) {
 
-                    System.out.println("    Parameter: " + queryParameterEntry.getKey() +
-                            (queryParameterEntry.getValue().isRequired() ? " *" : ""));
+                    System.out.println("    Parameter: " + queryParameterEntry.getKey()
+                           + " (" + queryParameterEntry.getValue().getType().toString().toLowerCase() + ")"
+                           + (queryParameterEntry.getValue().isRequired() ? " *" : ""));
 
                 }
 

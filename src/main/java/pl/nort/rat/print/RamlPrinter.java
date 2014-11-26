@@ -11,7 +11,7 @@ import java.util.Map;
 public class RamlPrinter implements RamlProcessor {
 
     @Override
-    public void parse(Raml raml) {
+    public void process(Raml raml) {
 
         Map<String, Resource> resources = raml.getResources();
         for (Map.Entry<String, Resource> resourceEntry : resources.entrySet()) {

@@ -4,6 +4,6 @@ import org.raml.model.Raml;
 
 public interface RamlProcessor {
 
-    void parse(Raml raml);
+    void process(Raml raml);
 
 }
